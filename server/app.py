@@ -26,12 +26,12 @@ def index():
     return '<h1>I am running</h1>'
 
 @app.route('/users')
-def get():
+def getting_users():
     users = [user.to_dict() for user in User.query.all()]
     return  make_response(users, 200)
 
 @app.route('/posts')
-def get():
+def get_posts():
     posts = [post.to_dict() for post in Post.query.all()]
     return make_response(posts, 200)
 
